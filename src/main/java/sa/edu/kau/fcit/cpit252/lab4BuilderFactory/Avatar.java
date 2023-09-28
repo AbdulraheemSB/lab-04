@@ -64,6 +64,8 @@ public final class Avatar {
     return sb.toString();
   }
 
+  //test
+
   public static class Builder{
     private final SkinTone skinTone;
     private HairType hairType;
