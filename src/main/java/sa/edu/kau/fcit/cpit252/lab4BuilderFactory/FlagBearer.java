@@ -5,12 +5,17 @@ public class FlagBearer implements Characters{
   private String name;
     private Avatar avatar;
     
-    public FlagBearer(String name){
-        if (name == null ) {
+    public FlagBearer(String name) {
+        if (name == null) {
             throw new IllegalArgumentException("Character must have a name");
         }
-        this.name=name;
-        this.avatar=new Avatar(SkinTone.LIGHT, HairType.CURLY, HairColor.BROWN, BodyType.SKINNY,FacialFeatures.GOATEE);
+        this.name = name;
+        this.avatar = new Avatar.Builder(SkinTone.LIGHT)
+                .withHairType(HairType.CURLY)
+                .withHairColor(HairColor.BROWN)
+                .withBodyType(BodyType.SKINNY)
+                .withFacialFeatures(FacialFeatures.GOATEE)
+                .build();
     }
     public String getName(){
         return this.name;
